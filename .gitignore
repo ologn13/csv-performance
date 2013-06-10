@@ -1,0 +1,11 @@
+.classpath
+.gradle/
+.groovy/
+.project
+.settings/
+*.iml
+*.ipr
+*.iws
+data.csv
+bin/
+build/

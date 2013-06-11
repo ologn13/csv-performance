@@ -21,6 +21,6 @@ public class Java7Base implements CsvReader {
 
     @Override
     public String[] processLine(String line) {
-        return line.split(";", -1);
+        return line.split(",", -1);
     }
 }

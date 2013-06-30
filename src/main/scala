@@ -1,0 +1,10 @@
+package csvPerformance
+
+import scala.io._
+
+
+class CsvReader {
+ 
+  def processCsvFile(path: String) = Source.fromFile(path).getLines.map(_.split(",")).toArray
+
+}

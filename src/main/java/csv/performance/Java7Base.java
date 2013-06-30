@@ -10,11 +10,15 @@ public class Java7Base implements CsvReader {
     public long processFile(String path) throws IOException {
         long lineCount = 0;
         try (BufferedReader in = new BufferedReader(new FileReader(path))) {
+          try{
             String line;
             while ((line = in.readLine()) != null) {
                 String[] fields = processLine(line);
                 lineCount++;
             }
+          }finally{
+              in.close();
+          }
         }
         return lineCount;
     }
